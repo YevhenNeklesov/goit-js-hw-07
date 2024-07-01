@@ -25,7 +25,7 @@ function addBoxes() {
     createBoxes(amount);
     inputNumber.innerHTML = '';
   } else {
-    console.log(`Please enter a number from 1 to 100`)
+    console.log(alert(`Please enter a number from 1 to 100`))
   }
   inputNumber.value = ''
 }
