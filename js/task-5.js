@@ -8,8 +8,9 @@ const colorsResult = document.querySelector('.color')
 button.addEventListener("click", getColor)
 
 function getColor() {
-  body.style.backgroundColor = getRandomHexColor()
-  colorsResult.textContent = getRandomHexColor()
+  const random = getRandomHexColor()
+  body.style.backgroundColor = random
+  colorsResult.textContent = random
 }
 
 function getRandomHexColor() {

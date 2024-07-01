@@ -27,6 +27,7 @@ function addBoxes() {
   } else {
     console.log(`Please enter a number from 1 to 100`)
   }
+  inputNumber.value = ''
 }
 
 function destroyBoxes() {
@@ -37,16 +38,18 @@ function destroyBoxes() {
       boxesContainer.innerHTML = ''
 
       let divSize = 30;
-      let div = 0;
+      let divContainer = '';
       for (let i = 0; i < amount; i++) {
-        div = document.createElement("div");
-        div.style.width = `${divSize}px`;
-        div.style.height = `${divSize}px`;
-        div.style.backgroundColor = getRandomHexColor();
+        let div = `<div style="width: ${divSize}px; height: ${divSize}px; background-color: ${getRandomHexColor()};"></div>`;
+        divContainer += div
         divSize += 10;
       }
-      boxesContainer.append(div)
+      
+      boxesContainer.innerHTML = divContainer;
+      
     }
+
+    
 
 
 function getRandomHexColor() {
@@ -56,5 +59,5 @@ function getRandomHexColor() {
 }
 
 
-console.log(boxesContainer)
+
 
